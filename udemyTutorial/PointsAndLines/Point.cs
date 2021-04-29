@@ -4,8 +4,16 @@ namespace PointsAndLines
 {
     class User
     {
+        public static int currentID;
         private string username;
         private int password;
+        public readonly int id;
+
+        public User()
+        {
+            currentID++;
+            id = currentID;
+        }
 
         public int Password {
             set
@@ -29,14 +37,10 @@ namespace PointsAndLines
             }
         }
 
-
-        public User()
-        {
-
-        }
-
         public User(string username)
         {
+            currentID++;
+            id = currentID;
             this.username = username;
      
         }

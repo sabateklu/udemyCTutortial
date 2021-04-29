@@ -10,9 +10,14 @@ namespace udemyTutorial
         static void Main()
         {
             User user = new User("Saba");
-            user.Password = 5;
 
-            Console.WriteLine(user.Username);
+            Console.WriteLine(User.currentID);
+
+            User userTwo = new User("hilla");
+            Console.WriteLine(User.currentID);
+            Console.WriteLine(user.id);
+            Console.WriteLine(userTwo.id);
+
         }
     }
 }
